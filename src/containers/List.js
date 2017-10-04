@@ -1,59 +1,55 @@
-import React, {Component} from 'react';
-// Import Link <<<<<<<<<<<<
-import {Link} from 'react-router-dom';
+import React, {Component} from 'react'
+
 
 
 export default class List extends Component {
-  console.log('props', this.props.status)
-  let data = this.props.status;
-  let List = data.map((status) => {
-    let url = status.url;
-    let endpoint = url.substr(url.lastIndexOf('s/*') - 1, 1);
-    let characters = status.characters.map((characters) => {
-      let endpoint = characters.substr(characters.indexOf("/satus/") + 7);
-      return <li key={characters}>
-          {/*Add a Link set to /charaters. Pass in the value of 'endpoint' for the text <<<<<<<<<<<<<<<<<*/}
-          <Link to = "/status/">{endpoint}</Link>
-      </li>
-    })
-    let starships = films.starships.map((starships) => {
-      let endpoint = starships.substr(starships.indexOf("/api/") + 5);
-      return <li key={starships}>
-      </li>
-    })
-    render() {
-  return (
-    <div className="">
-      <div className="">
-        <h1 className="headings">Films</h1>
-        <hr/>
-      </div>
-      {List}
-    </div>
-  );
+
+  constructor(props){
+    super(props)
+
+    this.fetchData = this.fetchData.bind(this);
+
+    this.state = {
+      cities : []
+    };
+
   }
+
+componentDidMount() {
+   fetch('https://young-falls-60611.herokuapp.com/api/cities')
+   .then(results => results.json())
+   .then(responseData => {
+     this.setState({cities: responseData.results});
+   })
+   .catch((error) => {
+     console.log("Error with Fetching : ", error);
+   });
 }
 
-export default class Places extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      'people': [],
+    fetchData(e) {
+      console.log('poots');
+     e.preventDefault();
+     fetch('https://young-falls-60611.herokuapp.com/api/cities').then(results => {
+       return results.json();
+     }).then(data => {
+       console.log(data);
+       this.setState({cities: data});
+     })
     }
-    componentDidMount(){
-      let url ="https://young-falls-60611.herokuapp.com/status";
-      // Fetch data from API
-      fetch(url).then((response) => {
-        return response.json();
-      }).then((data) => {
-        this.setState({places: data.results})
+
+render () {
+  let test = this.state.cities.map( (city, index) => {
+        return (
+  <div key={index}>
+    {city.name}
+  </div>
+        );
       });
-    }
-    render() {
   return (
-    <div className="app-body offset col-lg-10 col-lg-offset-1">
-      <List people={this.state.people}/>
-    </div>
-  );
-}
+    <div className = "playList">
+       <p>{test}</p>
+       <button onClick={this.fetchData}>this is a button</button>
+     </div>
+   )
+  }
 }
