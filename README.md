@@ -1,1 +1,1 @@
-![Alt text](../images/mockuppageone.jpg "Mockup sketches")
+![Mockup sketches](path/to/../images/mockuppageone.jpg?raw=true "Mockup sketches")
