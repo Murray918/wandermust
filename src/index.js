@@ -18,7 +18,7 @@ ReactDOM.render(
 <BrowserRouter>
 <BaseLayout>
   <Switch>
-    <Route exact path='/' component={Splash} />
+    <Route path='/' component={Splash} />
     <Route path='/list' component={List} />
     <Route path='/result' component={Result} />
     <Route path='/user' component={UserProfile} />
