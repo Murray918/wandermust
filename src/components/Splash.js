@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
-import arrowUpDown from '../components/arrowUpDown.js'
 
 export default class Splash extends Component {
   render() {
     return (
-      <p>65</p>
+      <div className="splash">
+        <div className="circle">
+          
+      <form>
+        <input type="number" placeholder="65°" className="tempinput" name="quantity" min="-20" max="120"></input>
+      </form>
+    </div>
+    </div>
+
     )
   }
 }

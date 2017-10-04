@@ -2,27 +2,56 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.splash {
+  background-image: url('https://images.unsplash.com/photo-1504406242839-6e462b3ccb91?dpr=1&auto=compress,format&fit=crop&w=1520&h=&q=80&cs=tinysrgb&crop=');
+  height: 600px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+input {
+  text-align: center;
   color: white;
+  font-size: 3em;
+  border: none;
+  background: rgba(0, 0, 0, 0);
+  outline: none;
 }
 
-.App-title {
-  font-size: 1.5em;
+::-webkit-input-placeholder { /* Chrome */
+  color: lavender;
+  transition: opacity 250ms ease-in-out;
+}
+:focus::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: lavender;
+  transition: opacity 250ms ease-in-out;
+}
+:focus:-ms-input-placeholder {
+  opacity: 0.5;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: lavender;
+  opacity: 1;
+  transition: opacity 250ms ease-in-out;
+}
+:focus::-moz-placeholder {
+  opacity: 0.5;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: lavender;
+  opacity: 1;
+  transition: opacity 250ms ease-in-out;
+}
+:focus:-moz-placeholder {
+  opacity: 0.5;
 }
 
-.App-intro {
-  font-size: large;
-}
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.circle {
+  align-self: center;
+  border: 4px solid white;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }
