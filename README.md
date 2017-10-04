@@ -1,1 +1,2 @@
-![Mockup sketches](path/to/../images/mockuppageone.jpg?raw=true "Mockup sketches")
+![Screen shot of console logged from assignment](../images/mockuppageone.jpg)
+Format: ![Alt Text](url)
