@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
+import Splash from '../components/Splash.js'
 'use strict'
 
-export default class List extends Component {
+ export default class List extends Component {
 
   constructor(props){
     super(props)
@@ -19,9 +20,11 @@ export default class List extends Component {
 
 
     fetchData(e) {
+      let url = 'https://young-falls-60611.herokuapp.com/api/search/temperature?temp='
+      let endpoint = this.props.temperature
       console.log('poots');
      e.preventDefault();
-     fetch('https://young-falls-60611.herokuapp.com/api/cities').then(results => {
+     fetch(`${url}/${endpoint}`).then(results => {
        return results.json();
      }).then(data => {
        console.log(data);
