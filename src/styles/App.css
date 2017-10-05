@@ -1,9 +1,16 @@
+body {
+  margin: 0;
+}
+
 .App {
   text-align: center;
 }
 
-button {
+.climatebtn {
   margin-top: 40px;
+}
+
+button {
   text-transform: uppercase;
   border: 2px solid white;
   color: #a0a0ec;
@@ -16,8 +23,13 @@ button {
 }
 
 .explorecat {
+  margin: 0;
+  text-transform: uppercase;
+  color: #a0a0ec;
+  padding: 10px 15px;
+  background-color: white;
+  text-align: center;
   padding-top: 200px;
-  background-color: #a0a0ec;
   height: 800px;
   background-image: url('https://images.unsplash.com/photo-1489556222275-c026a4c4142b?dpr=1&auto=compress,format&fit=crop&w=1504&h=&q=80&cs=tinysrgb&crop=');
   text-align: center;
