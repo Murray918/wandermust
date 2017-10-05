@@ -134,3 +134,19 @@ nav a {
   text-align: center;
   padding: 20px;
 }
+
+.term img {
+  height: 200px;
+}
+
+.results {
+  margin: 40px;
+}
+
+.term {
+  text-align: center;
+}
+
+.explorecat a {
+  color: #a0a0ec;
+}
