@@ -6,8 +6,6 @@ export default class ExploreCat extends Component {
   render() {
     return (
       <div className="explorecat">
-      <div className="catcoverPhoto">
-      </div>
       <button className="btn">Cloudy</button>
       <button className="btn">Rain</button>
       <button className="btn">Clear</button>

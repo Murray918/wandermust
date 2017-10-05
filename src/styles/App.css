@@ -2,35 +2,55 @@
   text-align: center;
 }
 
-.explorecat {
-  display: flex;
-  background-color: #a0a0ec;
-  height: 800px;
-  background-image: url('https://images.unsplash.com/photo-1505672450728-f972162ebeae?dpr=1&auto=compress,format&fit=crop&w=1500&h=&q=80&cs=tinysrgb&crop=');
-}
-
-.explorecat button {
-  justify-content: space-between;
-  align-self: center;
+button {
+  margin-top: 40px;
   text-transform: uppercase;
   border: 2px solid white;
-  color: white;
+  color: #a0a0ec;
   padding: 10px 15px;
-  background: rgba(0, 0, 0, 0);
+  background-color: white;
   border-radius: 10px;
   font-size: 2em;
   text-align: center;
+  outline: none;
+}
+
+.explorecat {
+  padding-top: 200px;
+  background-color: #a0a0ec;
+  height: 800px;
+  background-image: url('https://images.unsplash.com/photo-1489556222275-c026a4c4142b?dpr=1&auto=compress,format&fit=crop&w=1504&h=&q=80&cs=tinysrgb&crop=');
+  text-align: center;
+}
+
+.explorecat button {
+  align-self: center;
+  align-self: center;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin: 10px 20px;
 }
 
 .splash {
-  background-image: url('https://images.unsplash.com/photo-1504406242839-6e462b3ccb91?dpr=1&auto=compress,format&fit=crop&w=1520&h=&q=80&cs=tinysrgb&crop=');
+  background-image: url("https://images.unsplash.com/photo-1482178116735-0d7fc4305875?dpr=1&auto=compress,format&fit=crop&w=1500&h=&q=80&cs=tinysrgb&crop=");
+  background-position: center;
+  background-size:cover;
   height: 800px;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  margin: 0;
   display: flex;
   justify-content: center;
 }
 
 input {
   text-align: center;
+  padding-top: 60px;
+  padding-left: 20px;
   color: white;
   font-size: 4em;
   border: none;
@@ -71,9 +91,9 @@ input {
 
 .circle {
   align-self: center;
-  border: 4px solid white;
-  width: 200px;
-  height: 200px;
+  border: 6px solid white;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
 }
 
@@ -88,8 +108,8 @@ a {
 
 nav {
   text-transform: uppercase;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 nav a {
@@ -100,4 +120,5 @@ nav a {
   color: white;
   font-size: 1.2em;
   text-align: center;
+  padding: 20px;
 }
