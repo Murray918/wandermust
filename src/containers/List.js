@@ -32,14 +32,14 @@ export default class List extends Component {
     saveAndUpdateState(e) {
       e.preventDefault();
       console.log(e);
-      this.state.cityPass = e.target.className
-      console.log(this.state.cityPass);
+      let newStateValue = [e.target.className]
+      this.setState({cities : newStateValue})
     }
 
 
 render () {
   let testArray = this.state.cities;
-  console.log(testArray);
+  console.log(testArray)
    let test = testArray.map( (city) => {
         return (
   <div className="" key={city.name}>
@@ -50,13 +50,26 @@ render () {
     <button className = {city.name} onClick={this.saveAndUpdateState}>View City</button>
   </form>
   </div>
-        );
-      });
-  return (
+        )
+      })
+
+
+
+    if (testArray.length > 1){
+      return (
     <div className = "playList">
        <div>{test}</div>
        <button onClick={this.fetchData}>View</button>
      </div>
    )
+   } else {
+     return (
+     <div className = "playList">
+        <div>{this.state.cities}</div>
+        <button onClick={this.fetchData}>View</button>
+      </div>
+    )
+   }
+
   }
 }
