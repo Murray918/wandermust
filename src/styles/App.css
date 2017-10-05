@@ -2,6 +2,26 @@
   text-align: center;
 }
 
+.explorecat {
+  display: flex;
+  background-color: #a0a0ec;
+  height: 800px;
+  background-image: url('https://images.unsplash.com/photo-1505672450728-f972162ebeae?dpr=1&auto=compress,format&fit=crop&w=1500&h=&q=80&cs=tinysrgb&crop=');
+}
+
+.explorecat button {
+  justify-content: space-between;
+  align-self: center;
+  text-transform: uppercase;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 15px;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  font-size: 2em;
+  text-align: center;
+}
+
 .splash {
   background-image: url('https://images.unsplash.com/photo-1504406242839-6e462b3ccb91?dpr=1&auto=compress,format&fit=crop&w=1520&h=&q=80&cs=tinysrgb&crop=');
   height: 800px;
@@ -74,4 +94,10 @@ nav {
 
 nav a {
   margin-left: 20px;
+}
+
+.splash p {
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
 }

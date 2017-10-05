@@ -19,13 +19,10 @@ ReactDOM.render(
 <BrowserRouter>
 <BaseLayout>
   <Switch>
-    <Route path='/' component={Splash} />
+    <Route exact path='/' component={Splash} />
     <Route path='/list' component={List} />
     <Route path='/result' component={Result} />
-    <Route path='/user' component={UserProfile} />
     <Route path='/explore' component={Explore} />
-    <Route path='/exploretemperature' component={ExploreTemp} />
-    <Route path='/explorecategory' component={ExploreCat} />
   </Switch>
 </BaseLayout>
 </BrowserRouter>
