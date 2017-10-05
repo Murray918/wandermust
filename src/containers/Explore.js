@@ -7,14 +7,13 @@ export default class ExploreCat extends Component {
     return (
       <div className="explorecat">
       <button className="btn"><Link to="./cloudy">Cloudy</Link></button>
-      <button className="btn">Rain</button>
-      <button className="btn">Clear</button>
-      <button className="btn">Mist</button>
+      <button className="btn"><Link to="./rain">Rain</Link></button>
+      <button className="btn"><Link to="./clear">Clear</Link></button>
+      <button className="btn"><Link to="./mist">Mist</Link></button>
       <br />
-      <button className="btn">Fog</button>
-      <button className="btn">Haze</button>
-      <button className="btn">Thunderstorm</button>
-      <button className="btn">Drizzle</button>
+      <button className="btn"><Link to="./fog">Fog</Link></button>
+      <button className="btn"><Link to="./thunderstorm">Thunderstorm</Link></button>
+      <button className="btn"><Link to="./drizzle">Drizzle</Link></button>
       </div>
     )
   }
