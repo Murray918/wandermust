@@ -12,6 +12,7 @@ export default class ExploreCat extends Component {
       <button className="btn">Rain</button>
       <button className="btn">Clear</button>
       <button className="btn">Mist</button>
+      <br />
       <button className="btn">Fog</button>
       <button className="btn">Haze</button>
       <button className="btn">Thunderstorm</button>

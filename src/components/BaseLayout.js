@@ -19,10 +19,6 @@ export default class BaseLayout extends Component {
     <div>
     {this.props.children}
     </div>
-    <footer>
-      <span className="footer-title">&copy; WanderMust </span>
-      <span>For when you simply <strong>must</strong> get away</span>
-    </footer>
     </div>
     )
   }
