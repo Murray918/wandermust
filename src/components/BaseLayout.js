@@ -11,8 +11,8 @@ export default class BaseLayout extends Component {
 
      <nav>
       <NavLink activeClassName='selected' exact to='/'></NavLink>
-      <NavLink to='/user'>View Profile</NavLink>
-      <NavLink to='/browse'>Browse</NavLink>
+      <NavLink to='/splash'>Home</NavLink>
+      <NavLink to='/explore'>Explore</NavLink>
      </nav>
 
      </div>
