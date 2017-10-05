@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import List from 'react';
-let data = List.state.city
+import List from './List.js';
+
+// let data = List.state.cityPass;
 'use strict'
 
 
@@ -8,20 +9,22 @@ let data = List.state.city
 class Result extends Component {
 
   constructor(){
-
+    super()
 this.seeWhatHadHappened = this.seeWhatHadHappened.bind(this);
 
 }
 
 seeWhatHadHappened() {
-  console.log('the id is  ' + {data.id} 'the image city name is ' + data.name );
+  console.log('the id is  ' + List.state.cityPass + 'the image city name is ');
 }
 
   render (){
 
 
 
-    return seeWhatHadHappened()
+    return (
+     <div onClick = {this.seeWhatHadHappened}>Hello</div>
+    )
   }
 }
 

@@ -7,7 +7,7 @@ export default class List extends Component {
     super(props)
 
     this.fetchData = this.fetchData.bind(this);
-    this.seeWhatHadHappened = this.seeWhatHadHappened.bind(this);
+    this.saveAndUpdateState = this.saveAndUpdateState.bind(this);
 
 
     this.state = {
@@ -32,6 +32,8 @@ export default class List extends Component {
     saveAndUpdateState(e) {
       e.preventDefault();
       console.log(e);
+      this.state.cityPass = e.target.className
+      console.log(this.state.cityPass);
     }
 
 
@@ -39,13 +41,14 @@ render () {
   let testArray = this.state.cities;
   console.log(testArray);
    let test = testArray.map( (city) => {
-     console.log(index);
         return (
   <div className="" key={city.name}>
+    <form type ='submit'>
     <img src ="https://images.unsplash.com/photo-1482282375187-a7e57f76026d?dpr=1&auto=compress,format&fit=crop&w=1458&h=&q=80&cs=tinysrgb&crop=" />
     {city.name}
     <br/>
-    <button onClick={this.saveAndUpdateState}>View City</button>
+    <button className = {city.name} onClick={this.saveAndUpdateState}>View City</button>
+  </form>
   </div>
         );
       });
