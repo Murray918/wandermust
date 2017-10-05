@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-
 'use strict'
 
 export default class List extends Component {
@@ -8,10 +7,12 @@ export default class List extends Component {
     super(props)
 
     this.fetchData = this.fetchData.bind(this);
+    this.saveAndUpdateState = this.saveAndUpdateState.bind(this);
 
 
     this.state = {
-      cities : []
+      cities : [],
+      cityPass : []
     };
 
   }
@@ -28,6 +29,13 @@ export default class List extends Component {
      })
     }
 
+    saveAndUpdateState(e) {
+      e.preventDefault();
+      console.log(e);
+      this.state.cityPass = e.target.className
+      console.log(this.state.cityPass);
+    }
+
 
 render () {
   let testArray = this.state.cities;
@@ -35,15 +43,19 @@ render () {
    let test = testArray.map( (city) => {
         return (
   <div className="" key={city.name}>
+    <form type ='submit'>
     <img src ="https://images.unsplash.com/photo-1482282375187-a7e57f76026d?dpr=1&auto=compress,format&fit=crop&w=1458&h=&q=80&cs=tinysrgb&crop=" />
     {city.name}
+    <br/>
+    <button className = {city.name} onClick={this.saveAndUpdateState}>View City</button>
+  </form>
   </div>
         );
       });
   return (
     <div className = "playList">
        <div>{test}</div>
-       <button onClick={this.fetchData}>this is a button</button>
+       <button onClick={this.fetchData}>View</button>
      </div>
    )
   }
