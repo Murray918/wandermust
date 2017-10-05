@@ -16,23 +16,20 @@ button {
 }
 
 .explorecat {
-  display: flex;
+  padding-top: 200px;
   background-color: #a0a0ec;
   height: 800px;
-  background-image: url('https://images.unsplash.com/photo-1505672450728-f972162ebeae?dpr=1&auto=compress,format&fit=crop&w=1500&h=&q=80&cs=tinysrgb&crop=');
+  background-image: url('https://images.unsplash.com/photo-1489556222275-c026a4c4142b?dpr=1&auto=compress,format&fit=crop&w=1504&h=&q=80&cs=tinysrgb&crop=');
+  text-align: center;
 }
 
 .explorecat button {
-  justify-content: space-between;
+  align-self: center;
   align-self: center;
   text-transform: uppercase;
-  border: 2px solid white;
-  color: white;
   padding: 10px 15px;
-  background: rgba(0, 0, 0, 0);
   border-radius: 10px;
-  font-size: 2em;
-  text-align: center;
+  margin: 10px 20px;
 }
 
 .splash {
